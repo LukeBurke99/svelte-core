@@ -1,15 +1,37 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
+		"allowImportingTsExtensions": false,
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
+		"declaration": true,
+		// "baseUrl": ".",
+		"declarationDir": "./dist",
+		"rootDir": "./src",
+		"outDir": "./dist",
 		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true, // This is a must for SvelteKit
+		"jsx": "preserve",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		// "moduleDetection": "force",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUncheckedIndexedAccess": true,
+		// "noPropertyAccessFromIndexSignature": true, // use (obj["prop"]) instead of dot notation (obj.prop)
+		"noUnusedParameters": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
-	}
+		"target": "ESNext",
+		"useUnknownInCatchVariables": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules/*", "dist/*"]
 }
