@@ -26,10 +26,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		}
+		".": "./src/lib/index.ts"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
